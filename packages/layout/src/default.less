@@ -1,4 +1,54 @@
 @import '@arco-design/web-vue/es/style/theme/index.less';
+@import '@arco-design/web-vue/es/style/theme/css-variables.less';
 
 @basicLayout-prefix-cls: ~'@{prefix}-pro-basicLayout';
 @pro-layout-header-height: 48px;
+
+// ant变量重新赋值
+@font-size-base: @font-size-body-3;
+@component-background: var(~'@{arco-cssvars-prefix}-color-bg-1');
+@btn-primary-color: #fff;
+@primary-color: rgb(var(~'@{arco-cssvars-prefix}-primary-6'));
+@heading-color: var(~'@{arco-cssvars-prefix}-color-text-1');
+@text-color: var(~'@{arco-cssvars-prefix}-color-text-1');
+@text-color-secondary: var(~'@{arco-cssvars-prefix}-color-text-2');
+@border-width-base: @border-1;
+@border-style-base: @border-solid;
+@border-color-split: var(~'@{arco-cssvars-prefix}-color-neutral-3');
+
+// Media queries breakpoints
+// @screen-xs and @screen-xs-min is not used in Grid
+// smallest break point is @screen-md
+@screen-xs: 480px;
+@screen-xs-min: @screen-xs;
+// 👆 Extra small screen / phone
+
+// 👇 Small screen / tablet
+@screen-sm: 576px;
+@screen-sm-min: @screen-sm;
+
+// Medium screen / desktop
+@screen-md: 768px;
+@screen-md-min: @screen-md;
+
+// Large screen / wide desktop
+@screen-lg: 992px;
+@screen-lg-min: @screen-lg;
+
+// Extra large screen / full hd
+@screen-xl: 1200px;
+@screen-xl-min: @screen-xl;
+
+// Extra extra large screen / large desktop
+@screen-xxl: 1600px;
+@screen-xxl-min: @screen-xxl;
+@screen-xxxl: 2000px;
+@screen-xxxl-min: @screen-xxxl;
+
+// provide a maximum
+@screen-xs-max: (@screen-sm-min - 1px);
+@screen-sm-max: (@screen-md-min - 1px);
+@screen-md-max: (@screen-lg-min - 1px);
+@screen-lg-max: (@screen-xl-min - 1px);
+@screen-xl-max: (@screen-xxl-min - 1px);
+@screen-xxl-max: (@screen-xxxl-min - 1px);
