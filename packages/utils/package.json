@@ -1,7 +1,7 @@
 {
-  "name": "@arco-design/web-vue/pro-utils",
+  "name": "@arco-design-vue/pro-utils",
   "version": "0.1.0",
-  "description": "@arco-design/web-vue/pro-utils",
+  "description": "@arco-design-vue/pro-utils",
   "keywords": [
     "vue",
     "arco-design"
@@ -16,27 +16,14 @@
     "style": "dist/css/index.css",
     "module": "ArcoMaterial"
   },
-  "scripts": {
-    "build": "arco-vue-scripts build:material 'src/index.vue' & npm run dtsgen",
-    "docgen": "arco-vue-scripts docgen -i 'src/TEMPLATE.md'",
-    "dtsgen": "arco-vue-scripts dtsgen 'src/*.{ts,tsx,vue}'",
-    "test": "arco-vue-scripts test",
-    "clean": "rm -rf dist && rm -rf docs",
-    "prepublishOnly": "npm run clean && npm run build && npm run docgen",
-    "preview": "arco preview"
-  },
-  "peerDependencies": {
-    "vue": "^3.2.0"
-  },
-  "arcoMeta": {
-    "type": "vue-component",
-    "title": "@arco-design/web-vue/pro-utils",
-    "category": [
-      "utils"
-    ]
-  },
   "files": [
     "dist",
     "docs"
-  ]
+  ],
+  "dependencies": {
+    "vue-types": "^4.2.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  }
 }
